@@ -12,6 +12,7 @@ form.addEventListener('submit', onFormSubmit);
 form.addEventListener('input', throttle(onTeatareaInput, 500));
 
 function onFormSubmit(evt) {
+    console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)));
     evt.preventDefault();
     evt.currentTarget.reset();
     localStorage.removeItem(STORAGE_KEY);
